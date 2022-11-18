@@ -1,0 +1,131 @@
+<br>
+<div class="text-center">
+    <h1> <b>COURSES </b></h1>
+</div>
+
+
+
+
+
+<br>
+
+
+<div class="d-flex justify-content-between">
+  <div>
+     
+  </div>
+  
+  
+  <div>
+    
+    <!--
+    <div class="row">
+      <div class="col">
+          <input class="form-control pull-right" type="text"
+            placeholder="search"
+            [(ngModel)]="termino"
+            (input)="buscar()"
+          >
+      </div>
+    </div>
+  -->
+
+  <div class="row">
+    <div class="col">
+      <input
+        type="text"
+        placeholder="search"
+        class="form-control"
+        id="searchQuery"
+        (input)="onSearchQueryInput($event)"
+      />
+    </div>
+  </div>
+  
+  
+  
+  
+  </div>
+</div>
+
+
+
+<br>
+
+<br>
+
+<div fxLayout="row wrap"
+      fxLayout.xs="column"
+      fxLayoutAlign="center"
+      fxLayoutGap="20px"
+      >
+    
+    <div  *ngFor="let course of filteredCourses"
+    
+      fxFlex="40"
+      fxFlex.lg="20"
+      fxFlx.sm="80">
+
+         <!-- pongo el componente tarjeta pasándole el curso-->
+         <app-course-card [course]="course"></app-course-card>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!--
+      <div style="width: 18rem;" class="card col-md-3" 
+            *ngFor="let course of filteredCourses">
+                <div class="row">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ course.title }}</h5>
+                    <p class="card-text">Some quick example text e card's content.</p>
+                    <a href="#" class="btn btn-primary">{{ course._id}}</a>
+                  </div>
+              </div>
+      </div>
+-->
+
+
+
+
+
+
+ 
+
+
+<!--
+<div class="card" style="width: 18rem;"
+            *ngFor="let curso of cursosFiltrados">
+            <div class="row">
+            <div class="card-body">
+              <h5 class="card-title">{{ curso }}</h5>
+              <p class="card-text">Some quick example text e card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+  </div>
+-->
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
